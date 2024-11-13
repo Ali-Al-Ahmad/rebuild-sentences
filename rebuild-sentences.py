@@ -1,20 +1,20 @@
-words_array = ["the", "sky", "is", "blue"]
+"this function rebuild a words of a list accordin to a specific length"
+
+WORDS_ARRAY = ["the", "sky", "is", "blue"]
 lengths_array = [3,2,2,1]
 
-def rebuild_sentence(words, lengths):
+def _rebuild_sentence(words, lengths):
+    length_of_array = len(words)
     output = ""
-    
-    for i in range(len(words)):
+
+    for i in range(length_of_array):
         for j in range(lengths[i]):
-            
+
             # hanling numbers greater than length of a word
             if j<len(words[i]):
                 output= output+words[i][j]
-                
+
         output= output+" "
     print(output)
 
-rebuild_sentence(words_array, lengths_array)
-    
-            
-        
+_rebuild_sentence(WORDS_ARRAY, lengths_array)
